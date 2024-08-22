@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Interaction with ethers.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ethers.js"></script>
+    <script defer src="scriptforwebpage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ethereum Interaction</h1>
+
+        <div class="section">
+            <h2>Check Balance</h2>
+            <input type="text" id="balanceAddress" placeholder="Enter Ethereum Address">
+            <button onclick="getBalance()">Get Balance</button>
+            <p id="balanceResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Send Transaction</h2>
+            <input type="text" id="senderPrivateKey" placeholder="Enter Sender's Private Key">
+            <input type="text" id="recipientAddress" placeholder="Enter Recipient Address">
+            <input type="text" id="amount" placeholder="Enter Amount (ETH)">
+            <button onclick="sendTransaction()">Send Transaction</button>
+            <p id="transactionResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Contract Interaction</h2>
+            <button onclick="interactWithContract()">Interact with Contract</button>
+            <p id="contractResult"></p>
+        </div>
+
+        <div class="section">
+            <h2>Listen for Events</h2>
+            <button onclick="listenForEvents()">Start Listening</button>
+            <p id="eventLog"></p>
+        </div>
+    </div>
+</body>
+</html>
